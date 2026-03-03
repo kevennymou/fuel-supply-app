@@ -1,21 +1,23 @@
 <template>
   <div>
-    <h2>Buscar Abastecimento</h2>
+    <h2>Buscar por ID</h2>
 
-    <input v-model="id" placeholder="Informe o ID" />
+    <input v-model="id" placeholder="Digite o ID" />
     <button @click="search">Buscar</button>
 
     <div v-if="supply">
       <pre>{{ supply }}</pre>
     </div>
 
-    <p v-if="error" style="color:red">{{ error }}</p>
+    <p v-if="error" class="error">{{ error }}</p>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import { getSupplyById } from "../services/supplyService";
+//import supplyService from "../services/supplyService";
+import supplyMockService from "../services/supplyMockService";
+
 
 const id = ref("");
 const supply = ref(null);
@@ -23,10 +25,11 @@ const error = ref("");
 
 const search = async () => {
   try {
-    error.value = "";
-    const response = await getSupplyById(id.value);
+    const response = await supplyMockService.getSupplyById(id.value);
     supply.value = response.data;
-  } catch {
+    error.value = "";
+  } catch (err) {
+    supply.value = null;
     error.value = "Abastecimento não encontrado.";
   }
 };

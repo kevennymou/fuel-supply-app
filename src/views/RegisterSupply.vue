@@ -11,18 +11,19 @@
 <script setup>
 import { ref } from "vue";
 import SupplyForm from "../components/SupplyForm.vue";
-import supplyService from "../services/supplyService";
+//import supplyService from "../services/supplyMockService";
+import supplyMockService from "../services/supplyMockService";
 
 const message = ref("");
 const success = ref(false);
 
 const handleSubmit = async (formData) => {
   try {
-    await supplyService.createSupply(formData);
+    await supplyMockService.createSupply(formData);
     message.value = "Abastecimento cadastrado com sucesso!";
     success.value = true;
   } catch (error) {
-    message.value = error.response?.data?.message || "Erro ao cadastrar.";
+    message.value = "Erro ao cadastrar.";
     success.value = false;
   }
 };

@@ -19,9 +19,9 @@
 
 <script setup>
 import { ref } from "vue";
-import supplyService from "../services/supplyService";
+//import supplyService from "../services/supplyService";
+import supplyMockService from "../services/supplyMockService";
 import SupplyTable from "../components/SupplyTable.vue";
-import Pagination from "../components/Pagination.vue";
 
 const supplies = ref([]);
 const totals = ref(null);
@@ -34,13 +34,13 @@ const filters = ref({
 
 const loadSupplies = async () => {
   try {
-    const response = await supplyService.getSupplies({
+    const response = await supplyMockService.getSupplies({
       page: page.value,
       ...filters.value
     });
 
     supplies.value = response.data.content;
-    totals.value = await supplyService.getTotals().then(r => r.data);
+    totals.value = await supplyMockService.getTotals().then(r => r.data);
   } catch (error) {
     alert("Erro ao carregar abastecimentos.");
   }

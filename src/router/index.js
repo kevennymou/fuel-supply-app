@@ -8,8 +8,9 @@ const routes = [
   { path: "/register", component: RegisterSupply },
   { path: "/details", component: SupplyDetails }
 ];
-
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes
 });
+
+export default router;

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "driverId": 101,
+    "date": "2026-03-01",
+    "plate": "ABC-1234",
+    "fuelType": "DIESEL",
+    "liters": 50,
+    "pricePerLiter": 5.89,
+    "odometer": 120000,
+    "hourmeter": null,
+    "stationCnpj": "12.345.678/0001-90",
+    "stationName": "Posto Central",
+    "status": "APPROVED",
+    "obs": "Abastecimento normal"
+  },
+  {
+    "id": 2,
+    "driverId": 202,
+    "date": "2026-03-02",
+    "plate": "XYZ-9999",
+    "fuelType": "GASOLINA",
+    "liters": 35,
+    "pricePerLiter": 6.10,
+    "odometer": 89000,
+    "hourmeter": null,
+    "stationCnpj": "98.765.432/0001-11",
+    "stationName": "Posto Brasil",
+    "status": "PENDING",
+    "obs": "Abastecimento emergencial"
+  },
+  {
+    "id": 3,
+    "driverId": 101,
+    "date": "2026-03-03",
+    "plate": "ABC-1234",
+    "fuelType": "X",
+    "liters": 60,
+    "pricePerLiter": 5.75,
+    "odometer": 121500,
+    "hourmeter": 350,
+    "stationCnpj": "55.444.333/0001-22",
+    "stationName": "Posto Rodovia",
+    "status": "APPROVED",
+    "obs": "Veículo tipo X"
+  }
+]
