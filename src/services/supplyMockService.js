@@ -12,9 +12,9 @@ const simulateDelay = (data) => {
 
 export default {
 
-  async getSupplies({ page = 1, size = 5, plate, driverId, status }) {
+  async getSupplies({ page = 1, size = 5, plate, driverId}) {
 
-    let filtered = [...mockDatabase];
+    let filtered = [...supplies];
 
     if (plate) {
       filtered = filtered.filter(s =>
@@ -26,9 +26,9 @@ export default {
       filtered = filtered.filter(s => s.driverId == driverId);
     }
 
-    if (status) {
-      filtered = filtered.filter(s => s.status === status);
-    }
+    // if (status) {
+    //   filtered = filtered.filter(s => s.status === status);
+    // }
 
     const start = (page - 1) * size;
     const end = start + size;
@@ -40,11 +40,21 @@ export default {
     });
   },
 
-  async getSupplyById(id) {
-    const supply = mockDatabase.find(s => s.id == id);
+  // async getSupplyById(id) {
+  //   const supply = mockDatabase.find(s => s.id == Number(id));
 
+  //   if (!supply) {
+  //     throw new Error("Abastecimento não encontrado");
+  //   }
+
+  //   return simulateDelay(supply);
+  // },
+
+  async getSupplyById(id) {
+    const supply = supplies.find(s => s.id === Number(id));
+    
     if (!supply) {
-      throw new Error("Abastecimento não encontrado");
+      throw new Error("Not found");
     }
 
     return simulateDelay(supply);
