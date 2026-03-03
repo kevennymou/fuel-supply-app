@@ -26,10 +26,6 @@ export default {
       filtered = filtered.filter(s => s.driverId == driverId);
     }
 
-    // if (status) {
-    //   filtered = filtered.filter(s => s.status === status);
-    // }
-
     const start = (page - 1) * size;
     const end = start + size;
 
@@ -39,16 +35,6 @@ export default {
       totalPages: Math.ceil(filtered.length / size)
     });
   },
-
-  // async getSupplyById(id) {
-  //   const supply = mockDatabase.find(s => s.id == Number(id));
-
-  //   if (!supply) {
-  //     throw new Error("Abastecimento não encontrado");
-  //   }
-
-  //   return simulateDelay(supply);
-  // },
 
   async getSupplyById(id) {
     const supply = supplies.find(s => s.id === Number(id));

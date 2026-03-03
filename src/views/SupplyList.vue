@@ -63,7 +63,7 @@ const search = async () => {
     return;
   }
 
-  page.value = 1; // resetar pagina
+  page.value = 1; 
   await loadSupplies();
 };
 

@@ -15,9 +15,8 @@ body {
   background: #f5f5f5;
 }
 
-/* NAVBAR */
 nav {
-  background: #0f3d2e; /* verde escuro */
+  background: #0f3d2e; 
   padding: 20px 40px;
   display: flex;
   justify-content: center;
@@ -25,9 +24,8 @@ nav {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* LINKS */
 nav a {
-  color: #fdd835; /* amarelo */
+  color: #fdd835; 
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
@@ -35,19 +33,16 @@ nav a {
   position: relative;
 }
 
-/* HOVER */
 nav a:hover {
   color: white;
 }
 
-/* LINK ATIVO */
 nav a.router-link-active {
   color: white;
   border-bottom: 3px solid #fdd835;
   padding-bottom: 5px;
 }
 
-/* CONTAINER PADRÃO */
 .container {
   padding: 25px;
   background: white;
@@ -57,7 +52,6 @@ nav a.router-link-active {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* ALERTAS */
 .success {
   color: #0f3d2e;
   font-weight: bold;
@@ -67,6 +61,5 @@ nav a.router-link-active {
   color: #c62828;
   font-weight: bold;
 }
-
 
 </style>
