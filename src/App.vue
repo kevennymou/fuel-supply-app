@@ -68,10 +68,5 @@ nav a.router-link-active {
   font-weight: bold;
 }
 
-.page-title {
-  text-align: center;
-  color: #0f3d2e;
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+
 </style>
